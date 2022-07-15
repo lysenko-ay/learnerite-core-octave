@@ -1,0 +1,5 @@
+warning('off', 'Octave:future-time-stamp')
+warning('off', 'Octave:shadowed-function')
+addpath('hooks')
+warning('on', 'Octave:shadowed-function')
+pkg load json
