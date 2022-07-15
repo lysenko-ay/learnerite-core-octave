@@ -19,16 +19,20 @@ function __test__(varargin)
   endfor
 
   % format task values
-  parameters = jsonencode(varargin{:});
+  values = varargin(2:2:end);
+  fields = varargin(1:2:end);
+  parameters = jsonencode(cell2struct(values, fields, 2));
 
   % execute user code
+  warning('off', 'Octave:shadowed-function')
   addpath('overrides')
+  warning('on', 'Octave:shadowed-function')
   y = user();
   rmpath('overrides')
 
   % check if all inputs are consumed
-  if numel(__input_stack) ~= 0
-    error("error, input stack is not empty (%d value(s) left)", numel(__input_stack));
+  if numel(__input_stack__) ~= 0
+    error("error, input stack is not empty (%d value(s) left)", numel(__input_stack__));
   endif
 
   % display result
