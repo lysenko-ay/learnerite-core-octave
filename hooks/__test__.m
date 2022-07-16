@@ -32,11 +32,11 @@ function __test__(varargin)
 
   % check if all inputs are consumed
   if numel(__input_stack__) ~= 0
-    error("error, input stack is not empty (%d value(s) left)", numel(__input_stack__));
+    error("input stack is not empty (%d value(s) left)", numel(__input_stack__));
   endif
 
   % display result
-  disp([__getenv__('OCC_MAGIC', '187'), parameters, '|', jsonencode(x), '|', jsonencode(y)]);
+  disp([__getenv__('OCC_MAGIC', '96'), parameters, '|', jsonencode(x), '|', jsonencode(y)]);
 endfunction
 
 function __push_input__(value)
