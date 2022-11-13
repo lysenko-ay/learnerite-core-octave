@@ -1,2 +1,3 @@
 # build container
-`docker build . -t alextheregent/octave-core`
+
+`docker build . -t alextheregent/learnerite-core-octave`
